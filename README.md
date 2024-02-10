@@ -1,2 +1,2 @@
-# ecommers
+# Ecommers
 Ecommers used NextJs 
