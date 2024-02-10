@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev-vscode": "pnpm install --frozen-lockfile && pnpm run dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
