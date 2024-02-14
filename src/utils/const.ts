@@ -1,14 +1,22 @@
 export const navbar = [
   {
-    title: 'Home',
+    title: 'INICIO',
     src: '/',
   },
   {
-    title: 'About',
-    src: '/about',
+    title: 'NIÑAS',
+    src: '/RopaNiñas',
   },
   {
-    title: 'Contact',
-    src: '/contact',
+    title: 'NIÑOS',
+    src: '/RopaNiños',
+  },
+  {
+    title: 'BEBÉS',
+    src: '/RopaBebes',
+  },
+  {
+    title: 'OFERTAS',
+    src: '/RopaBebes',
   },
 ]

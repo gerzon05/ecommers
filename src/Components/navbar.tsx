@@ -20,32 +20,37 @@ export default function Navbar() {
     }
   }
   return (
-    <nav className='flex justify-between bg-transparent py-2 px-10 md:px-20'>
-      <figure className='text-left w-28'>
-        <Link href='/'>logo</Link>
-      </figure>
-      <div className='sm:flex gap-5 hidden sm:w-52 justify-center'>
-        {navbar.map((data, index) => (
-          <Link href={data.src} key={index}>
-            {data.title}
+    <nav className='sticky top-0 left-0 right-0 bg-white py-2 px-10 md:px-20'>
+      <div className='flex justify-between'>
+        <figure className='text-left w-28'>
+          <Link href='/'>logo</Link>
+        </figure>
+        <div className='md:flex gap-5 hidden md:w-52 justify-center'>
+          {navbar.map((data, index) => (
+            <Link href={data.src} key={index}>
+              {data.title}
+            </Link>
+          ))}
+        </div>
+        <div className='font-semibold w-40 hidden md:flex md:justify-end gap-2'>
+          <Link href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
+            Login
           </Link>
-        ))}
+          <span className='text-[#8B8E99]'>|</span>
+          <Link
+            href='/register'
+            className='text-[#8B8E99] hover:text-[#3858D6]'
+          >
+            Sign Up
+          </Link>
+        </div>
+        <button onClick={handleIsOpenMenuHamburger} className='md:hidden'>
+          <MenuHambuerger />
+        </button>
       </div>
-      <div className='font-semibold w-40 hidden sm:flex sm:justify-end gap-2'>
-        <Link href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
-          Login
-        </Link>
-        <span className='text-[#8B8E99]'>|</span>
-        <Link href='/register' className='text-[#8B8E99] hover:text-[#3858D6]'>
-          Sign Up
-        </Link>
-      </div>
-      <button onClick={handleIsOpenMenuHamburger} className='sm:hidden'>
-        <MenuHambuerger />
-      </button>
       {isOpenMenuHamburg && (
         <div
-          className={`fixed z-10 top-0 left-0 right-0 bottom-0 sm:hidden bg-black bg-opacity-20 bg-blend-darken ${
+          className={`fixed z-10 top-0 left-0 right-0 bottom-0 md:hidden bg-black bg-opacity-20 bg-blend-darken ${
             isClosingMenuHamburg ? 'scale-out-tr' : 'scale-in-tr'
           }`}
         >
