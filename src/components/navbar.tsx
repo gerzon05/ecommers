@@ -3,7 +3,7 @@
 import { navbar } from '@/utils/const'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Close, MenuHambuerger, Xbox } from './icons'
+import { Close, MenuHambuerger } from './icons'
 
 export default function Navbar() {
   const [isOpenMenuHamburg, setIsOpenMenuHamburg] = useState(false)
