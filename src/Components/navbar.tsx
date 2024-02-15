@@ -47,14 +47,12 @@ export default function Navbar() {
         <button className='md:hidden' onClick={handleIsOpenMenuHamburger}>
           <MenuHambuerger />
         </button>
-        <button className='md:hidden' onClick={handleIsOpenMenuHamburger}>
-          <MenuHambuerger />
-        </button>
       </div>
       {isOpenMenuHamburg && (
         <div
-          className={`fixed z-10 top-0 left-0 right-0 bottom-0 md:hidden bg-black bg-opacity-20 bg-blend-darken ${isClosingMenuHamburg ? 'scale-out-tr' : 'scale-in-tr'
-            }`}
+          className={`fixed z-10 top-0 left-0 right-0 bottom-0 md:hidden bg-black bg-opacity-20 bg-blend-darken ${
+            isClosingMenuHamburg ? 'scale-out-tr' : 'scale-in-tr'
+          }`}
         >
           <div className=' flex flex-col text-2xl items-center justify-center font-semibold  bg-white bg- w-full h-[100vh]'>
             <Link
@@ -65,8 +63,9 @@ export default function Navbar() {
             </Link>
             <button
               onClick={handleIsOpenMenuHamburger}
-              className={` p-1 icon icon-tabler icon-tabler-x absolute right-3 top-6 cursor-pointer text-[#8B8E99] ${isClosingMenuHamburg ? 'rotate-out' : ''
-                }`}
+              className={` p-1 icon icon-tabler icon-tabler-x absolute right-3 top-6 cursor-pointer text-[#8B8E99] ${
+                isClosingMenuHamburg ? 'rotate-out' : ''
+              }`}
             >
               <Close />
             </button>
