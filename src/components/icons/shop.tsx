@@ -9,8 +9,6 @@ export function Shop() {
       stroke-width='1.5'
       stroke='currentColor'
       fill='none'
-      stroke-linecap='round'
-      stroke-linejoin='round'
     >
       <path stroke='none' d='M0 0h24v24H0z' fill='none' />
       <path d='M4 7l.867 12.143a2 2 0 0 0 2 1.857h10.276a2 2 0 0 0 2 -1.857l.867 -12.143h-16z' />

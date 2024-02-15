@@ -5,18 +5,18 @@ export const navbar = [
   },
   {
     title: 'NIÑAS',
-    src: '/RopaNiñas',
+    src: '/',
   },
   {
     title: 'NIÑOS',
-    src: '/RopaNiños',
+    src: '/',
   },
   {
     title: 'BEBÉS',
-    src: '/RopaBebes',
+    src: '/',
   },
   {
     title: 'OFERTAS',
-    src: '/RopaBebes',
+    src: '/',
   },
 ]
