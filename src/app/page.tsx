@@ -1,7 +1,7 @@
-import { ButtonDefault } from '@/Components/ui'
+import { ButtonDefault } from '@/components/ui'
 import principalimage from '../../public/princpalimage.png'
 import Image from 'next/image'
-import Navbar from '@/Components/navbar'
+import Navbar from '@/components/navbar'
 
 export default function Home() {
   return (
