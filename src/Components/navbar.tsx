@@ -1,5 +1,6 @@
 'use client'
 
+import 'tailwindcss/components.css'
 import { navbar } from '@/utils/const'
 import Link from 'next/link'
 import { useState } from 'react'
