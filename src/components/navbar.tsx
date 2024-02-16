@@ -21,7 +21,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className='sticky top-0 left-0 right-0 bg-white py-2 px-10 md:px-20'>
+      <nav className='sticky z-20 top-0 left-0 right-0 bg-white py-2 px-10 md:px-20'>
         <div className='flex justify-between'>
           <figure className='text-left w-28'>
             <Link href='/'>logo</Link>

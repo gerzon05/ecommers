@@ -6,7 +6,6 @@ export function Cars() {
       width='60'
       height='60'
       viewBox='0 0 24 24'
-      stroke-width='1.5'
       stroke='currentColor'
       fill='none'
     >
