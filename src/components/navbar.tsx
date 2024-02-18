@@ -3,7 +3,7 @@
 import { navbar } from '@/utils/const'
 import Link from 'next/link'
 import { useState } from 'react'
-import { Close, MenuHambuerger } from './icons'
+import { Close, MenuHambuerger, Shop, ShopCars, User } from './icons'
 
 export default function Navbar() {
   const [isOpenMenuHamburg, setIsOpenMenuHamburg] = useState(false)
@@ -26,23 +26,27 @@ export default function Navbar() {
           <figure className='text-left w-28'>
             <Link href='/'>logo</Link>
           </figure>
-          <div className='md:flex gap-5 hidden md:w-52 justify-center'>
+          <div className='md:flex gap-2 lg:gap-5 hidden md:w-52 justify-center'>
             {navbar.map((data, index) => (
               <Link href={data.src} key={index}>
                 {data.title}
               </Link>
             ))}
           </div>
-          <div className='font-semibold w-40 hidden md:flex md:justify-end gap-2'>
+          <div className='font-semibold w-52 hidden md:flex md:justify-end lg:gap-2'>
+            <User />
             <Link href='/login' className='text-[#8B8E99] hover:text-[#3858D6]'>
               Login
             </Link>
-            <span className='text-[#8B8E99]'>|</span>
+            <span className='text-[#8B8E99] px-1'>|</span>
             <Link
               href='/register'
               className='text-[#8B8E99] hover:text-[#3858D6]'
             >
               Sign Up
+            </Link>
+            <Link href='/'>
+              <ShopCars width='w-6' />
             </Link>
           </div>
           <button className='md:hidden' onClick={handleIsOpenMenuHamburger}>
@@ -74,6 +78,7 @@ export default function Navbar() {
               ))}
             </div>
             <div className='font-semibold flex justify-center gap-4 m-6'>
+              <User />
               <Link
                 href='/login'
                 className='text-[#8B8E99] hover:text-[#3858D6]'
@@ -90,6 +95,9 @@ export default function Navbar() {
                 Sign Up
               </Link>
             </div>
+            <Link href='/' className='block'>
+              <ShopCars width='w-12' />
+            </Link>
           </div>
         </div>
       )}
