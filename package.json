@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@material-tailwind/react": "2.1.9",
+    "embla-carousel": "8.0.0-rc22",
+    "embla-carousel-autoplay": "8.0.0-rc22",
     "embla-carousel-react": "8.0.0-rc22",
     "next": "14.1.0",
     "react": "18",

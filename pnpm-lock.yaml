@@ -8,6 +8,12 @@ dependencies:
   '@material-tailwind/react':
     specifier: 2.1.9
     version: 2.1.9(react-dom@18.2.0)(react@18.2.0)
+  embla-carousel:
+    specifier: 8.0.0-rc22
+    version: 8.0.0-rc22
+  embla-carousel-autoplay:
+    specifier: 8.0.0-rc22
+    version: 8.0.0-rc22(embla-carousel@8.0.0-rc22)
   embla-carousel-react:
     specifier: 8.0.0-rc22
     version: 8.0.0-rc22(react@18.2.0)
@@ -1438,6 +1444,17 @@ packages:
         integrity: sha512-UpyCWObBoD+nSZgOC2ToaIdZB0r9GhqT2WahPKiSki6ckkSuKhQNso8V2PrFcHBMleI/eqbKgVQgVC4Wni4ilw==,
       }
     dev: true
+
+  /embla-carousel-autoplay@8.0.0-rc22(embla-carousel@8.0.0-rc22):
+    resolution:
+      {
+        integrity: sha512-UFR9ocKapxuYwcAOv8mb6Rmy7TENpzzHTymKADzB1L5dAJJxjUtOci/OpE3KrZedQaniLMz3HIO9hHqgj1h/3w==,
+      }
+    peerDependencies:
+      embla-carousel: 8.0.0-rc22
+    dependencies:
+      embla-carousel: 8.0.0-rc22
+    dev: false
 
   /embla-carousel-react@8.0.0-rc22(react@18.2.0):
     resolution:
