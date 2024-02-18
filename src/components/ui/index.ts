@@ -1,3 +1,3 @@
 'use client'
 
-export { ButtonDefault } from './button'
+export { Button } from './button'

@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className='bg-black w-full -z-10 h-full text-center lg:text-left lg:h-[94vh] lg:flex justify-between items-center'>
+      <div className='bg-slate-one w-full -z-10 h-full text-center lg:text-left lg:h-[94vh] lg:flex justify-between items-center'>
         <section className='w-full lg:w-1/2 p-10'>
           <h1 className='text-white mb-16 text-6xl'>Title</h1>
           <p className='text-white mb-10'>
@@ -38,7 +38,7 @@ export default function Home() {
           />
         </section>
       </div>
-      <div className='px-10 md:px-20 pt-10 pb-16 relative overflow-hidden'>
+      <div className='px-10 md:px-20 pt-10 pb-16 relative overflow-hidden bg-slate-two'>
         <CarouselCategory />
       </div>
     </>

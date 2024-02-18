@@ -35,7 +35,17 @@ export const Newest = [
     price: 'Desde $50.000',
   },
   {
+    name: 'Ropa para Bebe',
+    src: imagen,
+    price: 'Desde $50.000',
+  },
+  {
     name: 'Conjutos para Niña',
+    src: imagen,
+    price: 'Desde $55.000',
+  },
+  {
+    name: 'Vestidos',
     src: imagen,
     price: 'Desde $55.000',
   },

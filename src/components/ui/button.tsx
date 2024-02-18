@@ -1,8 +1,7 @@
-import { Button } from '@material-tailwind/react'
-type Props = {
-  name: string
-}
+import { ButtonHTMLAttributes } from 'react'
 
-export function ButtonDefault(props: Props) {
-  return <Button placeholder={props.name}>{props.name}</Button>
+type Props = ButtonHTMLAttributes<HTMLElement>
+
+export function Button(props: Props) {
+  return <button {...props}>{props.children}</button>
 }
