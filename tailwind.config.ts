@@ -8,12 +8,12 @@ module.exports = withMT({
     './pages/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+    extend: {},
+    colors: {
+      'slate-one': '#020617',
+      'slate-two': '#94a3b8',
+      'slate-three': '#475569',
+      'slate-four': '#e2e8f0',
     },
   },
   plugins: [],
