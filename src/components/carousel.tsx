@@ -1,10 +1,10 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import useCarousel from 'embla-carousel-react'
 import pluginAutoplay from 'embla-carousel-autoplay'
 
-import type { EmblaPluginType } from 'embla-carousel'
+import type { EmblaCarouselType, EmblaPluginType } from 'embla-carousel'
 import { type ReactNode, HTMLAttributes } from 'react'
 import { Button } from './ui'
 import { Left, Right } from './icons'
@@ -23,6 +23,9 @@ export default function Carousel({
   loop = false,
   ...props
 }: CarouselProps) {
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+
   const plugins: EmblaPluginType[] = []
 
   if (autoplay) {
@@ -39,19 +42,35 @@ export default function Carousel({
     if (emblaApi) emblaApi.scrollNext()
   }, [emblaApi])
 
+  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
+    setPrevBtnDisabled(!emblaApi.canScrollPrev())
+    setNextBtnDisabled(!emblaApi.canScrollNext())
+  }, [])
+
+  useEffect(() => {
+    if (!emblaApi) return
+
+    onSelect(emblaApi)
+
+    emblaApi.on('reInit', onSelect)
+    emblaApi.on('select', onSelect)
+  }, [emblaApi, onSelect])
+
   return (
     <div ref={emblaNode} className='overflow-hidden'>
       <div {...props}>{children}</div>
       {buttons && (
         <>
           <Button
-            className='absolute top-[58%] left-1 md:left-7'
+            className='absolute top-[52%] translate-y-1/2 left-1 md:left-7 disabled:opacity-0 rounded-full bg-slate-two/50'
+            disabled={prevBtnDisabled}
             onClick={handleScrollPrev}
           >
             <Left />
           </Button>
           <Button
-            className='absolute top-[58%] right-1 md:right-7'
+            className='absolute top-[52%] translate-y-1/2 right-1 md:right-7 disabled:opacity-0 rounded-full bg-slate-two/50'
+            disabled={nextBtnDisabled}
             onClick={handleScrollNext}
           >
             <Right />

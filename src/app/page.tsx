@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import { Cars, Shop } from '@/components/icons'
 import CarouselCategory from '@/components/category'
+import NewClothes from '@/components/new-clothes'
 
 export default function Home() {
   return (
@@ -38,8 +39,11 @@ export default function Home() {
           />
         </section>
       </div>
-      <div className='px-10 md:px-20 pt-10 pb-16 relative overflow-hidden bg-slate-two'>
+      <div className='px-10 md:px-20 pt-10 pb-16 relative overflow-hidden bg-slate-six'>
         <CarouselCategory />
+      </div>
+      <div className='pt-10 pb-16 relative overflow-hidden bg-slate-six'>
+        <NewClothes />
       </div>
     </>
   )

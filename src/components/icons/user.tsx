@@ -2,7 +2,7 @@ export function User() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      className='icon icon-tabler icon-tabler-user text-blue-700 w-6 stroke-[2px]'
+      className='icon icon-tabler icon-tabler-user text-slate-one w-6 stroke-[2px]'
       viewBox='0 0 24 24'
       stroke='currentColor'
       fill='none'

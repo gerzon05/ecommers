@@ -17,8 +17,8 @@ export default function CarouselCategory() {
       >
         {Newest.map((data, index) => (
           <Link href={'/'} key={index} className='group/item hover:scale-105'>
-            <div className='flex flex-wrap items-center gap-2 w-64 p-3 group-hover/item:bg-slate-four rounded-md'>
-              <div className='grid h-20 w-20 place-items-center rounded-lg bg-slate-four'>
+            <div className='flex flex-wrap items-center gap-2 w-64 p-3 md:group-hover/item:bg-slate-five rounded-md'>
+              <div className='grid h-20 w-20 place-items-center rounded-lg bg-slate-five'>
                 <Image
                   src={data.src}
                   alt={`Imagen de ${data.name}`}

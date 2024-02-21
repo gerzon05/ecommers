@@ -10,7 +10,6 @@ export function Close(props: Props) {
       width='30'
       height='30'
       viewBox='0 0 24 24'
-      stroke-width='1.5'
       stroke='currentColor'
       fill='none'
     >

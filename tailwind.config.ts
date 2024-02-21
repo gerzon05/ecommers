@@ -10,10 +10,12 @@ module.exports = withMT({
   theme: {
     extend: {},
     colors: {
-      'slate-one': '#020617',
-      'slate-two': '#94a3b8',
-      'slate-three': '#475569',
-      'slate-four': '#e2e8f0',
+      'slate-one': '#4d041c',
+      'slate-two': '#fe6e8b',
+      'slate-three': '#e51951',
+      'slate-four': '#ffc0cb',
+      'slate-five': '#fff1f3',
+      'slate-six': '#ffc0cb',
     },
   },
   plugins: [],

@@ -2,24 +2,80 @@ import imagen from '../../public/princpalimage.png'
 
 export const navbar = [
   {
-    title: 'INICIO',
-    src: '/',
-  },
-  {
     title: 'NIÑAS',
-    src: '/',
+    sub: [
+      {
+        title: 'Blusas',
+        src: '/',
+      },
+      {
+        title: 'Conjuntos',
+        src: '/',
+      },
+      {
+        title: 'Vestidos',
+        src: '/',
+      },
+    ],
   },
   {
     title: 'NIÑOS',
-    src: '/',
+    sub: [
+      {
+        title: 'Pantalones',
+        src: '/',
+      },
+      {
+        title: 'Camisas',
+        src: '/',
+      },
+      {
+        title: 'Sueteres',
+        src: '/',
+      },
+      {
+        title: 'zapatos',
+        src: '/',
+      },
+    ],
   },
   {
     title: 'BEBÉS',
-    src: '/',
+    sub: [
+      {
+        title: 'Bodys',
+        src: '/',
+      },
+      {
+        title: 'Pijamas',
+        src: '/',
+      },
+      {
+        title: 'Camisetas',
+        src: '/',
+      },
+      {
+        title: 'Vestidos',
+        src: '/',
+      },
+    ],
   },
   {
     title: 'OFERTAS',
-    src: '/',
+    sub: [
+      {
+        title: 'Niños',
+        src: '/',
+      },
+      {
+        title: 'Niñas',
+        src: '/',
+      },
+      {
+        title: 'Bebés',
+        src: '/',
+      },
+    ],
   },
 ]
 
