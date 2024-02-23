@@ -9,6 +9,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      poppins: ['Poppins'],
+    },
     colors: {
       'slate-one': '#4d041c',
       'slate-two': '#fe6e8b',
