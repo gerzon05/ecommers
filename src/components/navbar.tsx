@@ -55,11 +55,11 @@ export default function Navbar() {
           </div>
           <div className='font-semibold w-52 text-slate-one hidden md:flex md:justify-end lg:gap-2'>
             <User />
-            <Link href='/login' className='hover:text-slate-two'>
+            <Link href='/Login' className='hover:text-slate-two'>
               Login
             </Link>
             <span className='px-1'>|</span>
-            <Link href='/register' className='hover:text-slate-two'>
+            <Link href='/Register' className='hover:text-slate-two'>
               Sign Up
             </Link>
             <Link href='/'>

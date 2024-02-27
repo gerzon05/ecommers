@@ -1,5 +1,3 @@
-'use client'
-
 export { MenuHambuerger } from './menuhamburger'
 export { Close } from './close'
 export { Shop } from './shop'
@@ -13,3 +11,6 @@ export { Top } from './top'
 export { Facebook } from './facebook'
 export { Instagram } from './instagram'
 export { WhatsApp } from './whatsapp'
+export { Email } from './email'
+export { Password } from './password'
+export { Phone } from './phone'
