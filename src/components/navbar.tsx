@@ -2,13 +2,30 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Close, Down, MenuHambuerger, ShopCars, Top, User } from './icons'
+import { Close, Down, MenuHambuerger, ShopCars, User } from './icons'
 import { Button } from './ui'
 import { navbar } from '@/utils/const'
 
 export default function Navbar() {
   const [isOpenMenuHamburg, setIsOpenMenuHamburg] = useState(false)
   const [isClosingMenuHamburg, setIsClosingMenuHamburg] = useState(false)
+  const [navSelect, setNavSelect] = useState({
+    NIÑAS: false,
+    NIÑOS: false,
+    BEBÉS: false,
+    OFERTAS: false,
+  })
+
+  const handleNavSelect = (optionsnav: string) => {
+    setNavSelect(prev => ({
+      ...prev,
+      NIÑAS: optionsnav === 'NIÑAS' && prev.NIÑAS === false,
+      NIÑOS: optionsnav === 'NIÑOS' ? !prev.NIÑOS : false,
+      BEBÉS: optionsnav === 'BEBÉS' ? !prev.BEBÉS : false,
+      OFERTAS: optionsnav === 'OFERTAS' ? !prev.OFERTAS : false,
+
+    }))
+  }
 
   const handleIsOpenMenuHamburger = () => {
     if (isOpenMenuHamburg) {
@@ -24,24 +41,23 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="sticky z-20 top-0 left-0 right-0 bg-slate-six py-2 px-10 md:px-20">
+      <nav className="sticky z-50 top-0 left-0 right-0 bg-slate-six py-2 px-10 md:px-20">
         <div className="flex justify-between">
           <figure className="text-left w-28">
             <Link href="/">logo</Link>
           </figure>
           <div className="md:flex gap-2 lg:gap-5 text-slate-one hidden md:w-52 justify-center">
-            {navbar.map((data, index) => (
-              <div key={index} className="relative group/item">
+            {navbar.map((options, index) => (
+              <div key={index} className="relative">
                 <article>
-                  <Button className="hover:text-slate-two">{data.title}</Button>
+                  <Button onClick={() => handleNavSelect(options.title)} className="hover:text-slate-two">{options.title}</Button>
                 </article>
-                <article className="fixed top-9 opacity-0 rounded-m p-2 pt-3 bg-slate-five group-hover/item:opacity-100 text-slate-one rounded-md text-lg">
-                  <div className="absolute -top-3 left-3">
-                    <Top />
-                  </div>
-                  <div className="flex flex-col gap-1 w-32">
-                    {data.sub?.map((data, index) => (
+
+                <div className={`absolute top-7 left-0 p-3 bg-white w-48 rounded-md text-slate-one text-lg ${navSelect[options.title] ? 'block' : 'hidden'}`}>
+                  <div className="flex flex-col gap-2 w-full">
+                    {options.sub?.map((data, index) => (
                       <Link
+                        onClick={() => handleNavSelect(options.title)}
                         className="p-2 rounded-md hover:bg-slate-four"
                         href={data.src}
                         key={index}
@@ -50,7 +66,7 @@ export default function Navbar() {
                       </Link>
                     ))}
                   </div>
-                </article>
+                </div>
               </div>
             ))}
           </div>
