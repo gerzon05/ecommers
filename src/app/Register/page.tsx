@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import RegisterForm from '@/components/register-form'
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Register() {
   return (
     <>
-      <div className='flex justify-center items-center p-16'>
+      <div className="flex justify-center items-center p-16">
         <RegisterForm />
       </div>
     </>

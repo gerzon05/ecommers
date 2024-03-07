@@ -1,5 +1,5 @@
+import type { Metadata } from 'next'
 import LoginForm from '@/components/login-form'
-import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function Login() {
   return (
     <>
-      <div className='flex justify-center items-center p-16'>
+      <div className="flex justify-center items-center p-16">
         <LoginForm />
       </div>
     </>
