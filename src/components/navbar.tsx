@@ -96,17 +96,17 @@ export default function Navbar() {
             {isOpenMenuHamburg
               ? (
                 <Close style={isClosingMenuHamburg ? 'rotate-out' : ''} />
-                )
+              )
               : (
                 <MenuHambuerger />
-                )}
+              )}
           </button>
         </div>
       </nav>
       {isOpenMenuHamburg && (
         <div
           className={`fixed left-0 w-full top-11 bottom-0 z-20 bg-white ${isClosingMenuHamburg ? 'scale-out-tr' : 'scale-in-tr'
-          }`}
+            }`}
         >
           <div className="fixed w-full flex flex-col gap-5 text-2xl items-center justify-evenly font-semibold h-full p-9">
             {navbar.map((options, index) => (
@@ -135,7 +135,7 @@ export default function Navbar() {
             <div className="font-semibold flex justify-center gap-4 m-6">
               <User />
               <Link
-                href="/login"
+                href="/Login"
                 className="text-[#8B8E99] hover:text-[#3858D6]"
                 onClick={handleIsOpenMenuHamburger}
               >
@@ -143,7 +143,7 @@ export default function Navbar() {
               </Link>
               <span className="text-[#8B8E99]">|</span>
               <Link
-                href="/register"
+                href="/Register"
                 className="text-[#8B8E99] hover:text-[#3858D6]"
                 onClick={handleIsOpenMenuHamburger}
               >
