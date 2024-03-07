@@ -96,23 +96,25 @@ export default function Navbar() {
             {isOpenMenuHamburg
               ? (
                 <Close style={isClosingMenuHamburg ? 'rotate-out' : ''} />
-              )
+                )
               : (
                 <MenuHambuerger />
-              )}
+                )}
           </button>
         </div>
       </nav>
       {isOpenMenuHamburg && (
         <div
           className={`fixed left-0 w-full top-11 bottom-0 z-20 bg-white ${isClosingMenuHamburg ? 'scale-out-tr' : 'scale-in-tr'
-            }`}
+          }`}
         >
           <div className="fixed w-full flex flex-col gap-5 text-2xl items-center justify-evenly font-semibold h-full p-9">
             {navbar.map((options, index) => (
-              <div key={index} className='w-9/12'>
+              <div key={index} className="w-9/12">
                 <Button onClick={() => handleNavSelect(options.title)} className="hover:text-slate-two flex w-full justify-between">
-                  {options.title} <Down />
+                  {options.title}
+                  {' '}
+                  <Down />
                 </Button>
                 <div className={`p-3 bg-white rounded-md text-slate-one text-lg ${navSelect[options.most as keyof NavbarProps] ? 'block' : 'hidden'}`}>
                   <div className="flex flex-col gap-2 w-full">
