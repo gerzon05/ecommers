@@ -3,6 +3,7 @@ import imagen from '../../public/princpalimage.png'
 export const navbar = [
   {
     title: 'NIÑAS',
+    most: 'NINAS',
     sub: [
       {
         title: 'Blusas',
@@ -20,6 +21,7 @@ export const navbar = [
   },
   {
     title: 'NIÑOS',
+    most: 'NINOS',
     sub: [
       {
         title: 'Pantalones',
@@ -41,6 +43,7 @@ export const navbar = [
   },
   {
     title: 'BEBÉS',
+    most: 'BEBES',
     sub: [
       {
         title: 'Bodys',
@@ -62,6 +65,7 @@ export const navbar = [
   },
   {
     title: 'OFERTAS',
+    most: 'OFERTAS',
     sub: [
       {
         title: 'Niños',

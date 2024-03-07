@@ -2,27 +2,34 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { Close, Down, MenuHambuerger, ShopCars, User } from './icons'
+import { Close, Down, MenuHambuerger, ShopCars, Top, User } from './icons'
 import { Button } from './ui'
 import { navbar } from '@/utils/const'
+
+interface NavbarProps {
+  NINAS: boolean | string
+  NINOS: boolean | string
+  BEBES: boolean | string
+  OFERTAS: boolean | string
+}
 
 export default function Navbar() {
   const [isOpenMenuHamburg, setIsOpenMenuHamburg] = useState(false)
   const [isClosingMenuHamburg, setIsClosingMenuHamburg] = useState(false)
-  const [navSelect, setNavSelect] = useState({
-    NIÑAS: false,
-    NIÑOS: false,
-    BEBÉS: false,
+  const [navSelect, setNavSelect] = useState<NavbarProps>({
+    NINAS: false,
+    NINOS: false,
+    BEBES: false,
     OFERTAS: false,
   })
 
   const handleNavSelect = (optionsnav: string) => {
     setNavSelect(prev => ({
       ...prev,
-      NIÑAS: optionsnav === 'NIÑAS' && prev.NIÑAS === false,
-      NIÑOS: optionsnav === 'NIÑOS' ? !prev.NIÑOS : false,
-      BEBÉS: optionsnav === 'BEBÉS' ? !prev.BEBÉS : false,
-      OFERTAS: optionsnav === 'OFERTAS' ? !prev.OFERTAS : false,
+      NINAS: optionsnav === 'NIÑAS' && prev.NINAS === false,
+      NINOS: optionsnav === 'NIÑOS' && prev.NINOS === false,
+      BEBES: optionsnav === 'BEBÉS' && prev.BEBES === false,
+      OFERTAS: optionsnav === 'OFERTAS' && prev.OFERTAS === false,
 
     }))
   }
@@ -52,8 +59,10 @@ export default function Navbar() {
                 <article>
                   <Button onClick={() => handleNavSelect(options.title)} className="hover:text-slate-two">{options.title}</Button>
                 </article>
-
-                <div className={`absolute top-7 left-0 p-3 bg-white w-48 rounded-md text-slate-one text-lg ${navSelect[options.title] ? 'block' : 'hidden'}`}>
+                <div className={`absolute top-8 left-0 p-3 bg-white w-48 rounded-md text-slate-one text-lg ${navSelect[options.most as keyof NavbarProps] ? 'block' : 'hidden'}`}>
+                  <div className="absolute w-fit -top-3">
+                    <Top />
+                  </div>
                   <div className="flex flex-col gap-2 w-full">
                     {options.sub?.map((data, index) => (
                       <Link
