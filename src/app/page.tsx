@@ -8,10 +8,8 @@ import NewClothes from '@/components/new-clothes'
 export default function Home() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main>
+        <Navbar />
         <div className="bg-slate-one w-full -z-10 h-full text-center lg:text-left lg:h-[94vh] lg:flex justify-between items-center">
           <section className="w-full lg:w-1/2 p-10">
             <h1 className="text-white mb-16 text-6xl">Title</h1>

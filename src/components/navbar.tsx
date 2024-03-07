@@ -96,45 +96,40 @@ export default function Navbar() {
             {isOpenMenuHamburg
               ? (
                 <Close style={isClosingMenuHamburg ? 'rotate-out' : ''} />
-                )
+              )
               : (
                 <MenuHambuerger />
-                )}
+              )}
           </button>
         </div>
       </nav>
       {isOpenMenuHamburg && (
         <div
           className={`fixed left-0 w-full top-11 bottom-0 z-20 bg-white ${isClosingMenuHamburg ? 'scale-out-tr' : 'scale-in-tr'
-          }`}
+            }`}
         >
-          <div className="flex flex-col gap-5 text-2xl items-center justify-center font-semibold h-full">
-            <div className="flex flex-col gap-8 w-9/12">
-              {navbar.map((data, index) => (
-                <div key={index} className="group/item ">
-                  <article className="flex justify-between">
-                    <Button className="hover:text-slate-two">
-                      {data.title}
-                    </Button>
-                    <Down />
-                  </article>
-                  <article className="hidden rounded-m p-2 group-focus-within/item:block text-slate-one rounded-md text-lg w-full">
-                    <div className="flex flex-col gap-2 w-full pl-4">
-                      {data.sub?.map((data, index) => (
-                        <Link
-                          onClick={handleIsOpenMenuHamburger}
-                          className="p-2 rounded-md bg-slate-four"
-                          href={data.src}
-                          key={index}
-                        >
-                          {data.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </article>
+          <div className="fixed w-full flex flex-col gap-5 text-2xl items-center justify-evenly font-semibold h-full p-9">
+            {navbar.map((options, index) => (
+              <div key={index} className='w-9/12'>
+                <Button onClick={() => handleNavSelect(options.title)} className="hover:text-slate-two flex w-full justify-between">
+                  {options.title} <Down />
+                </Button>
+                <div className={`p-3 bg-white rounded-md text-slate-one text-lg ${navSelect[options.most as keyof NavbarProps] ? 'block' : 'hidden'}`}>
+                  <div className="flex flex-col gap-2 w-full">
+                    {options.sub?.map((data, index) => (
+                      <Link
+                        onClick={() => handleNavSelect(options.title)}
+                        className="p-2 rounded-md hover:bg-slate-four"
+                        href={data.src}
+                        key={index}
+                      >
+                        {data.title}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
             <div className="font-semibold flex justify-center gap-4 m-6">
               <User />
               <Link
