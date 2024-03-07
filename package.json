@@ -1,15 +1,15 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
-    "dev-vscode": "pnpm install --frozen-lockfile && pnpm run dev",
-    "dev": "next dev",
+    "prepare": "husky",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "fmt": "prettier . --write",
-    "fmt-check": "prettier . --check"
+    "lint": "eslint .",
+    "dev": "next dev",
+    "lint-ci": "pnpm run lint"
   },
   "dependencies": {
     "@material-tailwind/react": "2.1.9",
@@ -21,19 +21,32 @@
     "react-dom": "18"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "14.1.0",
-    "@types/node": "20",
-    "@types/react": "18",
-    "@types/react-dom": "18",
-    "@typescript-eslint/eslint-plugin": "6.21.0",
-    "@typescript-eslint/parser": "6.21.0",
+    "@antfu/eslint-config": "2.8.0",
+    "@commitlint/cli": "19.0.3",
+    "@commitlint/config-conventional": "19.0.3",
+    "@testing-library/react": "14.1.2",
+    "@types/node": "20.11.10",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
     "autoprefixer": "10.0.1",
+    "embla-carousel": "8.0.0",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
-    "eslint-plugin-react": "7.33.2",
-    "postcss": "8",
-    "prettier": "3.2.5",
-    "tailwindcss": "3.3.0",
-    "typescript": "5"
+    "eslint-plugin-format": "0.1.0",
+    "eslint-plugin-react-refresh": "0.4.5",
+    "lint-staged": "15.2.2",
+    "husky": "9.0.10",
+    "postcss": "8.4.33",
+    "tailwindcss": "3.4.1",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*": "eslint . --fix"
   }
 }
