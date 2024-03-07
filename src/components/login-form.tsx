@@ -6,7 +6,7 @@ import { Input } from './ui'
 export default function LoginForm() {
   return (
     <>
-      <form className="flex flex-col items-center gap-6 z-50 w-10/12 md:w-96 lg:w-[500px]">
+      <form className="flex flex-col items-center gap-6 w-10/12 md:w-96 lg:w-[500px]">
         <section className="text-center">
           <h2>Logo</h2>
           <h2>Formulario de Inicio de sesión</h2>
@@ -14,7 +14,7 @@ export default function LoginForm() {
         <section className="w-full">
           <label>Email*</label>
           <article className="relative">
-            <Input type="email" newStyle="w-full pl-8" placeholder="Email" />
+            <Input type="email" newstyle="w-full pl-8" placeholder="Email" />
             <Email />
           </article>
         </section>
@@ -23,7 +23,7 @@ export default function LoginForm() {
           <article className="relative">
             <Input
               type="password"
-              newStyle="w-full pl-8"
+              newstyle="w-full pl-8"
               placeholder="Password"
             />
             <Password />

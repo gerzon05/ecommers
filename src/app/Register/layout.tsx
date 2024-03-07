@@ -7,8 +7,10 @@ export default function AuthLayout({
 }) {
   return (
     <>
-      <Navbar />
-      <main>{children}</main>
+      <main>
+        <Navbar />
+        {children}
+      </main>
     </>
   )
 }
